@@ -1,0 +1,371 @@
+
+
+/* ===== Usual Suspects ===== */
+:root {
+	/* borders */
+	--slight-radius:0.125em;
+	--standard-radius:0.25em;
+	--rounded-radius:1em;
+
+	/* coloration */
+	--charcoal:#58595b;
+	--strong-cyan:#58b7b3;
+	--body-font-color:#5D6261;
+	--retro-bg-color:#C9C7C9;
+
+	/* shades of gray */
+	--med-gray:#666;
+	--bright-gray:#eaedf0;
+}
+
+
+/* ===== Page ===== */
+html, body {
+	font-size: 1em;
+}
+
+body {
+	color: var(--body-font-color);
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(4,1fr); 
+	align-items: center;
+}
+
+/* grid template */ 
+.grid-container {
+	display: grid;
+	padding: 1em;
+	margin: 1em auto;
+	max-width: 45em;
+	width: 100%;
+}
+
+
+/* ===== Retro Grid, One ===== */
+.grid-container.retro-umber {
+	grid-template: repeat( 10, [row] minmax(2em, 1fr)) / repeat( 9, [col] 1fr );
+	grid-gap: 0.25em;
+	border: 1px solid var(--body-font-color);
+	background: var(--retro-bg-color);
+	height: 22.5em;
+}
+.grid-container.retro-umber > section {
+	align-items: center;
+	font-size: 0.9em;
+	font-weight: lighter;
+	line-height: 1;
+	border-radius: var(--slight-radius);
+	border: 3px solid var(--body-font-color);
+	padding: 0.45em;
+}
+
+/* tiles */
+.grid-container.retro-umber .tile-1 {
+	background: #BDDCDF;
+	grid-column: col 1 / span 2;
+	grid-row: row 1 / span 5;
+	opacity: 1;
+}
+.grid-container.retro-umber .tile-2 {
+	background: #D4B7B8;
+	grid-column: col 4 / span 3;
+	grid-row: row 1 / span 8;
+	opacity: 1;
+}
+.grid-container.retro-umber .tile-3 {
+	background: #D2C7C7;
+	grid-column: col 5 / span 5;
+	grid-row: row 2 / span 2;
+	opacity: 0.8;
+	/*border: 1px solid #606567;*/
+}
+.grid-container.retro-umber .tile-4 {
+	background: #9187CA;
+	grid-column: col 7 / span 2;
+	grid-row: row 1 / span 2;
+	opacity: 1;
+}
+.grid-container.retro-umber .tile-5 {
+	background: #B9C8CE;
+	grid-column: col 1 / span 4;
+	grid-row: row 2 / span 2;
+	opacity: 0.8;
+	border: 1px solid #606567;
+}
+.grid-container.retro-umber .tile-6 {
+	background: #B9C8CE;
+	grid-column: col 6 / span 3;
+	grid-row: row 4 / span 2;
+	opacity: 0.8;
+	border: 1px solid #606567;
+}
+.grid-container.retro-umber .tile-7 {
+	background: #B9C8CE;
+	grid-column: col 5 / span 5;
+	grid-row: row 5 / span 5;
+	opacity: 0.8;
+	/*border: 1px solid #606567;*/
+	z-index: 1;
+}
+.grid-container.retro-umber .tile-8 {
+	background: #B9C8CE;
+	grid-column: col 1 / span 4;
+	grid-row: row 6 / span 5;
+	opacity: 0.8;
+	border: 1px solid #606567;
+}
+.grid-container.retro-umber .tile-9 {
+	background: #B9C8CE;
+	grid-column: col 4 / span 6;
+	grid-row: row 10;
+	opacity: 0.8;
+	border: 1px solid #606567;
+}
+.grid-container.retro-umber .tile-10 {
+	background: #B9C8CE;
+	grid-column: col 3 / span 3;
+	grid-row: row 5;
+	opacity: 0.8;
+	border: 1px solid #606567;
+}
+
+
+/* ===== Realty Grid Business Card ===== */
+.grid-container.business-card {
+	grid-template: repeat( 10, [row] minmax(120px, 1fr)) / repeat( 9, [col] 1fr );
+	grid-gap: 0.125em;
+	border: 1px solid var(--bright-gray);
+	box-shadow: 10px 10px 87px -40px rgba(211,211,211,1);
+	height: 30.5em;
+}
+.grid-container.business-card > section {
+	align-items: center;
+	font-weight: lighter;
+	line-height: 1;
+	border-radius: var(--slight-radius);
+	border: 1px solid var(--med-gray);
+	padding: 0.45em;
+}
+.grid-container.business-card h1 {
+	font-size: 3em; 
+	margin: 0.5em 0.25em; 
+	color: var(--strong-cyan); 
+	text-decoration: underline;
+}
+
+/* tiles */
+.grid-container.business-card .tile-0 {
+	grid-column: col 1 / span 9;
+	grid-row: row 1;
+}
+.grid-container.business-card .tile-1 {
+	grid-column: col 1 / span 3;
+	grid-row: row 2;
+}
+.grid-container.business-card .tile-2 {
+	grid-column: col 4;
+	grid-row: row 2;
+}
+.grid-container.business-card .tile-3 {
+	grid-column: col 5 / span 2;
+	grid-row: row 2;
+}
+.grid-container.business-card .tile-4 {
+	grid-column: col 7 / span 3;
+	grid-row: row 2;
+}
+.grid-container.business-card .tile-5 {
+	grid-column: col 1;
+	grid-row: row 3;
+}
+.grid-container.business-card .tile-6 {
+	grid-column: col 2 / span 4;
+	grid-row: row 3;
+}
+.grid-container.business-card .tile-7 {
+	grid-column: col 6 / span 2;
+	grid-row: row 3;
+}
+.grid-container.business-card .tile-8 {
+	grid-column: col 8;
+	grid-row: row 3;
+}
+.grid-container.business-card .tile-9 {
+	grid-column: col 9;
+	grid-row: row 3;
+}
+.grid-container.business-card .tile-10 {
+	background-color: var(--charcoal);
+	grid-column: col 1 / span 9;
+	grid-row: row 4;
+	padding: 1em;
+}
+
+
+/* ===== Retro Grid, Two ===== */
+.grid-container.retro-teal {
+	grid-template: repeat( 10, [row] minmax(2em, 1fr)) / repeat( 9, [col] 1fr );
+	grid-gap: 0.25em;
+	border: 1px solid var(--body-font-color);
+	background: var(--retro-bg-color);
+	height: 22.5em;
+}
+.grid-container.retro-teal > section {
+	align-items: center;
+	font-size: 0.9em;
+	font-weight: lighter;
+	line-height: 1;
+	border-radius: var(--slight-radius);
+	border: 3px solid var(--body-font-color);
+	padding: 0.45em;
+}
+
+/* tiles */
+.grid-container.retro-teal .tile-1 {
+	background: #BEDDDF;
+	grid-column: col 1 / span 2;
+	grid-row: row 1 / span 5;
+	opacity: 1;
+}
+.grid-container.retro-teal .tile-2 {
+	background: #D4B8B7;
+	grid-column: col 4 / span 3;
+	grid-row: row 1 / span 8;
+	opacity: 1;
+}
+.grid-container.retro-teal .tile-3 {
+	background: #D1C7C6;
+	grid-column: col 5 / span 5;
+	grid-row: row 2 / span 2;
+	opacity: 0.8;
+}
+.grid-container.retro-teal .tile-4 {
+	background: #9188C9;
+	grid-column: col 7 / span 2;
+	grid-row: row 1 / span 2;
+	opacity: 1;
+}
+.grid-container.retro-teal .tile-5 {
+	background: #B9C8CD;
+	grid-column: col 1 / span 4;
+	grid-row: row 2 / span 2;
+	opacity: 0.8;
+}
+.grid-container.retro-teal .tile-6 {
+	background: #BEDDDF;
+	grid-column: col 6 / span 3;
+	grid-row: row 4 / span 2;
+	opacity: 0.8;
+}
+.grid-container.retro-teal .tile-7 {
+	background: #A4DED2;
+	grid-column: col 5 / span 5;
+	grid-row: row 5 / span 5;
+	opacity: 0.8;
+}
+.grid-container.retro-teal .tile-8 {
+	background: #7EDBD2;
+	grid-column: col 1 / span 4;
+	grid-row: row 6 / span 5;
+	opacity: 0.8;
+}
+.grid-container.retro-teal .tile-9 {
+	background: #7CD6CE;
+	grid-column: col 4 / span 6;
+	grid-row: row 10;
+	opacity: 0.8;
+}
+.grid-container.retro-teal .tile-10 {
+	background: #79D0C7;
+	grid-column: col 3 / span 3;
+	grid-row: row 5;
+	opacity: 0.8;
+}
+
+
+/* ===== Retro Grid, Three ===== */
+.grid-container.retro-mauve {
+	grid-template: repeat( 10, [row] minmax(2em, 1fr)) / repeat( 9, [col] 1fr );
+	grid-gap: 0.25em;
+	border: 3px solid #F7F4F7;
+	background: #D2C8D1;
+	height: 22.5em;
+}
+.grid-container.retro-mauve > section {
+	align-items: center;
+	font-size: 0.9em;
+	font-weight: lighter;
+	line-height: 1;
+	border-radius: var(--slight-radius);
+	border: 3px solid #4D4A4E;
+	box-shadow: 0px 8px 4px -4px rgba(167,160,168,1);
+	padding: 0.45em;
+}
+
+/* tiles */
+.grid-container.retro-mauve .tile-1 {
+	background: #C1DEE2;
+	grid-column: col 1 / span 2;
+	grid-row: row 1 / span 5;
+	opacity: 1;
+}
+.grid-container.retro-mauve .tile-2 {
+	background: #D8B8BD;
+	grid-column: col 3 / span 5;
+	grid-row: row 1 / span 4;
+	opacity: 1;
+}
+.grid-container.retro-mauve .tile-3 {
+	background: #D3C7CB;
+	grid-column: col 5 / span 5;
+	grid-row: row 2 / span 2;
+	opacity: 0.8;
+}
+.grid-container.retro-mauve .tile-4 {
+	background: #9388CC;
+	grid-column: 9;
+	grid-row: row 4 / span 4;
+	opacity: 1;
+}
+.grid-container.retro-mauve .tile-5 {
+	background: #BFC2C7;
+	grid-column: col 2 / span 3;
+	grid-row: row 2 / span 3;
+	opacity: 0.8;
+}
+.grid-container.retro-mauve .tile-6 {
+	background: #C1DEE2;
+	grid-column: col 6 / span 3;
+	grid-row: row 4 / span 3;
+	opacity: 0.8;
+}
+.grid-container.retro-mauve .tile-7 {
+	background: #A9DDD8;
+	grid-column: col 5 / span 5;
+	grid-row: row 9 / span 2 ;
+	opacity: 1;
+}
+.grid-container.retro-mauve .tile-8 {
+	background: #5A8387;
+	grid-column: col 2 / span 3;
+	grid-row: row 6 / span 5;
+	opacity: 1;
+}
+.grid-container.retro-mauve .tile-9 {
+	background: #6FDFD3;
+	grid-column: col 4 / span 6;
+	grid-row: 10;
+	opacity: 0.8;
+}
+.grid-container.retro-mauve .tile-10 {
+	background: #7ED0CC;
+	grid-column: col 3 / span 3;
+	grid-row: 5;
+	opacity: 1;
+}
+
+
